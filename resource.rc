@@ -1,0 +1,185 @@
+// Microsoft Visual C++ 生成的资源脚本。
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+#include "winres.h"
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICONAPP             ICON            "iconapp.ico"
+
+//
+// MANIFEST
+//
+1          RT_MANIFEST      MOVEABLE PURE   ".manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION VERSION_NUMBER
+ PRODUCTVERSION VERSION_NUMBER
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "CompanyName", "killtimer"
+            VALUE "FileDescription", "Windows 错误代码查询"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, MAIN_NORMAL_X, MAIN_NORMAL_Y
+STYLE DS_SETFONT | DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 9, "新宋体", 400, 0, 0x1
+//FONT 8, "MS Shell Dlg", 400, 0, 0x1
+CAPTION "Windows 错误代码查询工具"
+BEGIN
+    EDITTEXT        IDC_MAIN_E_SEARCH,0,10,300,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_MAIN_L_DATA,"SysListView32",LVS_SINGLESEL|LVS_SHOWSELALWAYS|LVS_ALIGNLEFT|LVS_REPORT|LVS_OWNERDATA|WS_TABSTOP,0,30,300,210
+    CONTROL         "",IDC_MAIN_S_BAR,"msctls_statusbar32",SBARS_TOOLTIPS,0,0,0,0
+END
+
+IDD_READ DIALOGEX 0, 0, 310, 255
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "读取字符串"
+FONT 9, "新宋体", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "关闭",IDCANCEL,250,50,50,14
+    DEFPUSHBUTTON   "生成(&G)",IDOK,250,30,50,14
+    COMBOBOX        IDC_READ_COMBO,10,10,265,14,CBS_DROPDOWN|CBS_AUTOHSCROLL|CBS_SORT|WS_VSCROLL|WS_TABSTOP
+    PUSHBUTTON      "...",IDC_READ_BROWSE,280,10,20,14
+    EDITTEXT        IDC_READ_E_ID,10,30,230,14,ES_AUTOHSCROLL
+    GROUPBOX        "消息表",IDC_READ_G_MSG,10,50,230,95
+    EDITTEXT        IDC_READ_E_MSG,15,60,220,80,ES_MULTILINE|ES_WANTRETURN|ES_AUTOVSCROLL|ES_READONLY|NOT WS_BORDER|WS_VSCROLL
+    GROUPBOX        "字符串表",IDC_READ_G_STR,10,150,230,95
+    EDITTEXT        IDC_READ_E_STR,15,160,220,80,ES_MULTILINE|ES_WANTRETURN|ES_AUTOVSCROLL|ES_READONLY|NOT WS_BORDER|WS_VSCROLL
+END
+
+IDD_HELP DIALOGEX 0, 0, 200, 120
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "帮助"
+FONT 9, "新宋体", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,140,96,50,14
+    LTEXT           "搜索框支持以下类别：\r\n\r\n数字\t纯数字、以0x开头、h结尾均可\r\n类型\t文本前加冒号\r\n其他\t支持通配符的名称\r\n\r\n当出现以空格分隔的多个项时，类别间作与运算，类别内作或运算，数字仅最后一个生效。",IDC_HELP_MSG,10,10,180,76,0
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 200, 120
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于"
+FONT 9, "新宋体", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,140,96,50,14
+    ICON            IDI_ICONAPP,IDC_ABOUT_ICON,10,10,32,32
+    CONTROL         "Windows 错误代码查询工具\r\n作者：killtimer\r\n\r\n让错误查询更加快捷\r\n\r\n<a id=""Home"">作者主页</a>  <a id=""Feedback"">反馈bug</a>",IDC_ABOUT_MSG,"SysLink",WS_TABSTOP,42,10,148,76
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "从文件读取(&R)...",                   ID_MAIN_FILE_READ
+        MENUITEM SEPARATOR
+        MENUITEM "导出当前项(&C)...",                   ID_MAIN_FILE_EXPCUR
+        MENUITEM "导出所有项(&A)...",                   ID_MAIN_FILE_EXPALL
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                           IDCANCEL
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "置于顶层(&A)",                        ID_MAIN_VIEW_TOP
+        MENUITEM SEPARATOR
+        MENUITEM "颜色交替显示(&C)",                    ID_MAIN_VIEW_ALTCOLOR
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "帮助(&H)",                           ID_MAIN_HELP_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "关于(&A)",                           ID_MAIN_HELP_ABOUT
+    END
+END
+
+IDR_CONTEXTMENU MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "复制名称(&N)",                        ID_CTXMENU_COPYNAME
+        MENUITEM "复制十六进制值(&X)",                   ID_CTXMENU_COPYHEX
+        MENUITEM "复制类型(&T)",                        ID_CTXMENU_COPYSCOPE
+        MENUITEM "复制描述(&D)",                        ID_CTXMENU_COPYDESC
+        MENUITEM "复制数值(&V)",                        ID_CTXMENU_COPYVAL
+        MENUITEM SEPARATOR
+        MENUITEM "在 MSDN 中搜索(&S)",                  ID_CTXMENU_SEARCH
+    END
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_HINT_SEARCH         "筛选名称/数值/类型, 名称支持通配符"
+    IDS_HINT_EMPTY          "搜索结果为空"
+    IDS_HINT_PATH           "文件路径"
+    IDS_HINT_ID             "资源ID"
+    IDS_S_PREPARING         "准备中..."
+    IDS_S_DONE              "已加载 %u 项"
+    IDS_S_SEARCHDONE        "已找到 %u 项"
+    IDS_S_ITEMMSG           "#define %s %u"
+    IDS_S_COPIED            "已复制 %s"
+    IDS_S_EXPORTED          "导出成功"
+    IDS_MSDN_URL_FMT        "https://docs.microsoft.com/en-us/search/?terms=%s"
+        // We use en-us for a better experience.
+
+    IDS_FILTER_ALL          "所有文件(*.*)"
+    IDS_FILTER_TEXT         "文本文档(*.txt)"
+    IDS_FILTER_RES          "二进制资源(*.exe;*.dll 等)"
+
+    IDS_ERR_READ_FMT        "无法识别的ID格式"
+    IDS_ERR_READ_NAME       "模块名称不能为空"
+    IDS_ERR_READ_MOD        "找不到或无法识别模块%s\r\n\r\n%s"
+    IDS_ERR_READ_RES        "在模块%s中找不到ID为0x%X的字符串"
+
+    IDS_MAIN_COLUMN_NAME    "名称"
+    IDS_MAIN_COLUMN_VAL     "值"
+    IDS_MAIN_COLUMN_SCOPE   "类型"
+    IDS_MAIN_COLUMN_MSG     "描述"
+END
+
+#endif    // 中文(简体，中国) resources
+

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="provider.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\ec_bug.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\ec_ccm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\ec_com.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\ec_d3d.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\ec_dme.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\ec_dsreg.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\ec_errno.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\ec_gdip.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\ec_http.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\ec_mdm.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\ec_nt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\ec_setup.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\ec_sig.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\ec_win32.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mod\ec_winhttp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dlgabout.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dlghelp.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dlgmain.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dlgread.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="errh.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="guiaux.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ldmgr.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ecf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
