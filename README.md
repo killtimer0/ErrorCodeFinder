@@ -1,5 +1,7 @@
 # ErrorCodeFinder
 
+> 本项目已重构并迁移至新地址：[winlex](https://github.com/killtimer0/winlex)。
+
 Windows 错误代码查询工具
 
 ## 介绍
